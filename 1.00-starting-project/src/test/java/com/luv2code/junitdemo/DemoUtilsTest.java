@@ -76,6 +76,7 @@ class DemoUtilsTest {
     void testIterableEquals() {
         List<String> theList = List.of("luv", "2", "code");
 
+        // Assert the lists are deeply equals
         assertIterableEquals(theList, demoUtils.getAcademyInList(), "Expected list should be same as actual list");
     }
 

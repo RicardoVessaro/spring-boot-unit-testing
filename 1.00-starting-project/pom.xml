@@ -28,12 +28,42 @@
             <!--
             If maven don't recognize JUnit5 tests use this plugin
             (In Apache Maven 3.9.1 (SUSE 3.9.1-2.1) recognize by default)
+
+            Need to be added if you want to use maven-surefire-report-plugin
+            In my case if I didn't the clean test send an error:
+                Could not find goal 'report' in plugin org.apache.maven.plugins:maven-surefire-plugin:3.0.0-M5
+            -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
             </plugin>
+
+
+            <!--
+            Adding maven test reports
+
+            To add website resources use:
+                mvn site -DgenerateReports=false
+
+            '-DgenerateReports=false' is used to not override existing HTML reports
+
             -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>3.0.0-M5</version>
+
+                <executions>
+                    <execution>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
         </plugins>
     </build>
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.luv2code.junitdemo.DemoUtilsTest" time="2.072" tests="10" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.luv2code.junitdemo.DemoUtilsTest" time="2.071" tests="10" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/usr/lib64/jvm/java-17-openjdk-17/lib"/>
-    <property name="sun.java.command" value="/home/ricardo/Development/Repos/spring-boot-unit-testing/1.00-starting-project/target/surefire/surefirebooter-20230609224752396_3.jar /home/ricardo/Development/Repos/spring-boot-unit-testing/1.00-starting-project/target/surefire 2023-06-09T22-47-52_320-jvmRun1 surefire-20230609224752396_1tmp surefire_0-20230609224752396_2tmp"/>
+    <property name="sun.java.command" value="/home/ricardo/Development/Repos/spring-boot-unit-testing/1.00-starting-project/target/surefire/surefirebooter13437307550872987732.jar /home/ricardo/Development/Repos/spring-boot-unit-testing/1.00-starting-project/target/surefire 2023-06-09T22-56-30_460-jvmRun1 surefire4019323369691339639tmp surefire_012798502313881115635tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/ricardo/Development/Repos/spring-boot-unit-testing/1.00-starting-project/target/test-classes:/home/ricardo/Development/Repos/spring-boot-unit-testing/1.00-starting-project/target/classes:/home/ricardo/.m2/repository/org/junit/jupiter/junit-jupiter/5.8.2/junit-jupiter-5.8.2.jar:/home/ricardo/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.2/junit-jupiter-api-5.8.2.jar:/home/ricardo/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/ricardo/.m2/repository/org/junit/platform/junit-platform-commons/1.8.2/junit-platform-commons-1.8.2.jar:/home/ricardo/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/ricardo/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.8.2/junit-jupiter-params-5.8.2.jar:/home/ricardo/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.8.2/junit-jupiter-engine-5.8.2.jar:/home/ricardo/.m2/repository/org/junit/platform/junit-platform-engine/1.8.2/junit-platform-engine-1.8.2.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -27,7 +27,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/home/ricardo/Development/Repos/spring-boot-unit-testing/1.00-starting-project/target/surefire/surefirebooter-20230609224752396_3.jar"/>
+    <property name="surefire.real.class.path" value="/home/ricardo/Development/Repos/spring-boot-unit-testing/1.00-starting-project/target/surefire/surefirebooter13437307550872987732.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.7+0-suse-3.1-x8664"/>
     <property name="user.name" value="ricardo"/>
@@ -51,18 +51,18 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testNullAndNotNull" classname="com.luv2code.junitdemo.DemoUtilsTest" time="0.024"/>
-  <testcase name="testEqualsAndNotEquals" classname="com.luv2code.junitdemo.DemoUtilsTest" time="0.003"/>
-  <testcase name="testTrueFalse" classname="com.luv2code.junitdemo.DemoUtilsTest" time="0.002"/>
+  <testcase name="testNullAndNotNull" classname="com.luv2code.junitdemo.DemoUtilsTest" time="0.026"/>
+  <testcase name="testEqualsAndNotEquals" classname="com.luv2code.junitdemo.DemoUtilsTest" time="0.002"/>
+  <testcase name="testTrueFalse" classname="com.luv2code.junitdemo.DemoUtilsTest" time="0.001"/>
   <testcase name="testLinesMatch" classname="com.luv2code.junitdemo.DemoUtilsTest" time="0.003"/>
   <testcase name="testTimeout" classname="com.luv2code.junitdemo.DemoUtilsTest" time="2.007">
     <system-out><![CDATA[I am going to sleep
 Sleeping over
 ]]></system-out>
   </testcase>
-  <testcase name="testSameAndNotSame" classname="com.luv2code.junitdemo.DemoUtilsTest" time="0.001"/>
-  <testcase name="testArrayEquals" classname="com.luv2code.junitdemo.DemoUtilsTest" time="0.002"/>
+  <testcase name="testSameAndNotSame" classname="com.luv2code.junitdemo.DemoUtilsTest" time="0.002"/>
+  <testcase name="testArrayEquals" classname="com.luv2code.junitdemo.DemoUtilsTest" time="0.001"/>
   <testcase name="testIterableEquals" classname="com.luv2code.junitdemo.DemoUtilsTest" time="0.001"/>
-  <testcase name="testMultiply" classname="com.luv2code.junitdemo.DemoUtilsTest" time="0.001"/>
+  <testcase name="testMultiply" classname="com.luv2code.junitdemo.DemoUtilsTest" time="0"/>
   <testcase name="testThrowsAndDoesNotThrow" classname="com.luv2code.junitdemo.DemoUtilsTest" time="0.002"/>
 </testsuite>

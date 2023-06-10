@@ -2,8 +2,7 @@ package com.luv2code.junitdemo;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.condition.EnabledOnOs;
-import org.junit.jupiter.api.condition.OS;
+import org.junit.jupiter.api.condition.*;
 
 // Conditional test @annotations can be set in the class or method level
 class ConditionalTest {
@@ -43,4 +42,31 @@ class ConditionalTest {
         // execute method and perform test
     }
 
+    @Test
+    // This test only run in Java 17 version
+    @EnabledOnJre(JRE.JAVA_17)
+    void testOnlyForJava17() {
+        // execute method and perform test
+    }
+
+    @Test
+    // This test only run in Java 13 version
+    @EnabledOnJre(JRE.JAVA_13)
+    void testOnlyForJava13() {
+        // execute method and perform test
+    }
+
+    @Test
+    // This test only run in Java 13 to Java 18 version
+    @EnabledForJreRange(min=JRE.JAVA_13, max=JRE.JAVA_18)
+    void testOnlyForJavaRange() {
+        // execute method and perform test
+    }
+
+    @Test
+    // This test only run in Java 11 version or higher
+    @EnabledForJreRange(min=JRE.JAVA_11)
+    void testOnlyForJavaRangeMin() {
+        // execute method and perform test
+    }
 }

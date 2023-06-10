@@ -69,4 +69,19 @@ class ConditionalTest {
     void testOnlyForJavaRangeMin() {
         // execute method and perform test
     }
+
+    @Test
+    // This test only runs if the environment variable named 'LUV2CODE_ENV' is set as 'DEV'
+    @EnabledIfEnvironmentVariable(named="LUV2CODE_ENV", matches="DEV")
+    void testOnlyForDevEnvironment() {
+        // execute method and perform test
+    }
+
+    @Test
+    // This test only runs if the system property named 'LUV2CODE_SYS_PROP' is set as 'CI_CD_DEPLOY'
+    @EnabledIfSystemProperty(named="LUV2CODE_SYS_PROP", matches="CI_CD_DEPLOY")
+    void testOnlyForSystemProperty() {
+        // execute method and perform test
+    }
+
 }

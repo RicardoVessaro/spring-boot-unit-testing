@@ -37,6 +37,11 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
+
+                <configuration>
+                    <!-- Configuration to generate reports if tests pass or fail-->
+                    <testFailureIgnore>true</testFailureIgnore>
+                </configuration>
             </plugin>
 
 
@@ -44,10 +49,10 @@
             Adding maven test reports
 
             To add website resources use:
-                mvn site -DgenerateReports=false
+                >>> mvn site -DgenerateReports=false
 
-            '-DgenerateReports=false' is used to not override existing HTML reports
-
+                '-DgenerateReports=false' is used to not override existing HTML reports
+                You need to use this command after run the tests every time
             -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

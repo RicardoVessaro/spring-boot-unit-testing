@@ -1,6 +1,8 @@
 package com.luv2code.tdd;
 
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -48,5 +50,36 @@ class FizzBuzzTest {
 
         assertEquals(expected, FizzBuzz.compute(1), "Should return 1");
     }
+
+    @DisplayName("Testing with Small data file")
+    /*
+        With @ParameterizedTest annotation: behind the scenes,
+        JUnit will run the test multiple times and supply the
+        data for the parameters.
+
+        So, now the test method has parameters.
+
+        JUnit does the looping for you.
+
+        You can define the name of loop invocation given the parameter 'name' in the annotation
+
+        To see more about parameterized tests see:
+        https://junit.org/junit5/docs/current/user-guide/#writing-tests-parameterized-tests.
+     */
+    @ParameterizedTest(name="value={0}, expected={1}")
+    /*
+    To get the values we define a source for our test using the following annotations:
+    @ValueSource: Array of values: Strings, ints, doubles, floats etc
+    @CsvSource: Array of CSV String values
+    @CsvFileSource: CSV values read from a file
+        To use @CsvFileSource we created a file named 'small-test-data.csv' in the resource folder of the test directory
+    @EnumSource: Enum constant values
+     */
+    @CsvFileSource(resources="/small-test-data.csv")
+    @Order(5)
+    void testSmallDataFile(int value, String expected) {
+        assertEquals(expected, FizzBuzz.compute(value));
+    }
+
 
 }

@@ -73,6 +73,7 @@ class FizzBuzzTest {
     @CsvSource: Array of CSV String values
     @CsvFileSource: CSV values read from a file
         To use @CsvFileSource we created a file named 'small-test-data.csv' in the resource folder of the test directory
+        If the project can't find the file try to rebuild project in the build menu
     @EnumSource: Enum constant values
      */
     @CsvFileSource(resources="/small-test-data.csv")
@@ -81,5 +82,19 @@ class FizzBuzzTest {
         assertEquals(expected, FizzBuzz.compute(value));
     }
 
+    @DisplayName("Testing with Medium data file")
+    @ParameterizedTest(name="value={0}, expected={1}")
+    @CsvFileSource(resources="/medium-test-data.csv")
+    @Order(6)
+    void testMediumDataFile(int value, String expected) {
+        assertEquals(expected, FizzBuzz.compute(value));
+    }
 
+    @DisplayName("Testing with Large data file")
+    @ParameterizedTest(name="value={0}, expected={1}")
+    @CsvFileSource(resources="/large-test-data.csv")
+    @Order(7)
+    void testLargeDataFile(int value, String expected) {
+        assertEquals(expected, FizzBuzz.compute(value));
+    }
 }

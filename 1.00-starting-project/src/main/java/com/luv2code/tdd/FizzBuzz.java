@@ -9,6 +9,28 @@ public class FizzBuzz {
 
     public static String compute(int i) {
 
+        StringBuilder result = new StringBuilder();
+
+        if(i % 3 == 0) {
+            result.append("Fizz");
+        }
+
+        if(i % 5 == 0) {
+            result.append("Buzz");
+        }
+
+        if(result.isEmpty()) {
+            result.append(i);
+        }
+
+        return result.toString();
+    }
+    /*
+    Two different ways to resolve the FizzBuzz
+    (To show the freedon we have to refactro our code)
+
+    public static String compute(int i) {
+
         if( (i % 3 == 0) && (i % 5 == 0) ) {
             return "FizzBuzz";
         }
@@ -23,5 +45,6 @@ public class FizzBuzz {
         }
 
     }
+    */
 
 }

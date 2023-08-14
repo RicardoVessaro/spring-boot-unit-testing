@@ -13,6 +13,10 @@ public class MvcTestingExampleApplication {
 		SpringApplication.run(MvcTestingExampleApplication.class, args);
 	}
 
+	/*
+		@Bean: Manually define 'CollegeStudent' as a Bean named collegeStudent.
+		@Scope: Set scope as 'prototype'.
+	 */
 	@Bean(name = "collegeStudent")
 	@Scope(value = "prototype")
 	CollegeStudent getCollegeStudent() {
